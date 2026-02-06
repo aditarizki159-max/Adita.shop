@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Jasa Komik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Beranda</a>
+</nav>
+
+<div class="container card">
+  <h1>Jasa Pembuatan Komik</h1>
+
+  <ul>
+    <li>✔ Cerita bebas</li>
+    <li>✔ Revisi ringan</li>
+    <li>✔ File digital</li>
+  </ul>
+
+  <p><strong>Harga mulai Rp50.000</strong></p>
+
+  <h3>Form Pemesanan</h3>
+  <input id="nama" placeholder="Nama" style="width:100%;padding:10px"><br><br>
+  <textarea id="detail" placeholder="Detail pesanan" style="width:100%;padding:10px"></textarea><br><br>
+
+  <button class="btn" onclick="kirimWA()">Pesan via WhatsApp</button>
+</div>
+
+<script>
+function kirimWA() {
+  const nama = document.getElementById('nama').value;
+  const detail = document.getElementById('detail').value;
+
+  const pesan = `Halo, saya ${nama}. Saya ingin memesan Jasa Pembuatan Komik. Detail: ${detail}`;
+  window.open(
+    'https://wa.me/6285334190704?text=' + encodeURIComponent(pesan),
+    '_blank'
+  );
+}
+</script>
+
+</body>
+</html>
