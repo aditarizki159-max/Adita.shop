@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Jasa Desain Grafis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="tentang.html">Tentang</a>
+</nav>
+
+<div class="container card">
+  <h1>Jasa Desain Grafis</h1>
+
+  <p>Saya menyediakan jasa desain grafis profesional untuk kebutuhan:</p>
+
+  <ul>
+    <li>✔ Poster</li>
+    <li>✔ Logo</li>
+    <li>✔ Feed Instagram</li>
+    <li>✔ Banner / Thumbnail</li>
+  </ul>
+
+  <p><strong>Harga mulai Rp30.000</strong></p>
+
+  <h3>Form Pemesanan</h3>
+
+  <input 
+    id="nama" 
+    type="text" 
+    placeholder="Nama Anda"
+    style="width:100%;padding:10px;margin-bottom:10px"
+  >
+
+  <textarea 
+    id="detail" 
+    placeholder="Detail desain yang diinginkan"
+    style="width:100%;padding:10px;margin-bottom:10px"
+  ></textarea>
+
+  <button class="btn" onclick="kirimWA()">Pesan via WhatsApp</button>
+</div>
+
+<script>
+function kirimWA() {
+  const nama = document.getElementById('nama').value;
+  const detail = document.getElementById('detail').value;
+
+  const pesan =
+    `Halo, saya ${nama}. Saya ingin memesan Jasa Desain Grafis. ` +
+    `Detail pesanan: ${detail}`;
+
+  const nomorWA = '6285334190704'; // GANTI NOMOR WA
+  const url = 'https://wa.me/' + nomorWA + '?text=' + encodeURIComponent(pesan);
+
+  window.open(url, '_blank');
+}
+</script>
+
+<footer>
+  © 2026 ADITA — Jasa Kreatif
+</footer>
+
+</body>
+</html>
